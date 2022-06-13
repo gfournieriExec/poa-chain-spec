@@ -1,0 +1,477 @@
+{
+  "contractName": "IRewardByBlock",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address[]"
+        },
+        {
+          "name": "",
+          "type": "uint16[]"
+        }
+      ],
+      "name": "reward",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]"
+        },
+        {
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.24;\n\n\ninterface IRewardByBlock {\n    // Produce rewards for the given benefactors, with corresponding reward codes.\n    // Only callable by `SYSTEM_ADDRESS`\n    function reward(address[], uint16[]) external returns (address[], uint256[]);\n}\n",
+  "sourcePath": "/Users/gabrielfournier1/Documents/POA_Network/building-network-open-eth/poco-deployement-rebase/repo-deployement-github-etc/poa-network-consensus-contracts/contracts/interfaces/IRewardByBlock.sol",
+  "ast": {
+    "absolutePath": "/Users/gabrielfournier1/Documents/POA_Network/building-network-open-eth/poco-deployement-rebase/repo-deployement-github-etc/poa-network-consensus-contracts/contracts/interfaces/IRewardByBlock.sol",
+    "exportedSymbols": {
+      "IRewardByBlock": [
+        14853
+      ]
+    },
+    "id": 14854,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14837,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:27"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 14853,
+        "linearizedBaseContracts": [
+          14853
+        ],
+        "name": "IRewardByBlock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 14852,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "reward",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14840,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14852,
+                  "src": "198:9:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14838,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "198:7:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 14839,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "198:9:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14843,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14852,
+                  "src": "209:8:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint16_$dyn_calldata_ptr",
+                    "typeString": "uint16[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14841,
+                      "name": "uint16",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "209:6:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint16",
+                        "typeString": "uint16"
+                      }
+                    },
+                    "id": 14842,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "209:8:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint16_$dyn_storage_ptr",
+                      "typeString": "uint16[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "197:21:27"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 14851,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14847,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14852,
+                  "src": "237:9:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14845,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "237:7:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 14846,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "237:9:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14850,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14852,
+                  "src": "248:9:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14848,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "248:7:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 14849,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "248:9:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "236:22:27"
+            },
+            "scope": 14853,
+            "src": "182:77:27",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14854,
+        "src": "27:234:27"
+      }
+    ],
+    "src": "0:262:27"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/gabrielfournier1/Documents/POA_Network/building-network-open-eth/poco-deployement-rebase/repo-deployement-github-etc/poa-network-consensus-contracts/contracts/interfaces/IRewardByBlock.sol",
+    "exportedSymbols": {
+      "IRewardByBlock": [
+        14853
+      ]
+    },
+    "id": 14854,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14837,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:27"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 14853,
+        "linearizedBaseContracts": [
+          14853
+        ],
+        "name": "IRewardByBlock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 14852,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "reward",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14840,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14852,
+                  "src": "198:9:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14838,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "198:7:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 14839,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "198:9:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14843,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14852,
+                  "src": "209:8:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint16_$dyn_calldata_ptr",
+                    "typeString": "uint16[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14841,
+                      "name": "uint16",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "209:6:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint16",
+                        "typeString": "uint16"
+                      }
+                    },
+                    "id": 14842,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "209:8:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint16_$dyn_storage_ptr",
+                      "typeString": "uint16[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "197:21:27"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 14851,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14847,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14852,
+                  "src": "237:9:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14845,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "237:7:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 14846,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "237:9:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14850,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14852,
+                  "src": "248:9:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14848,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "248:7:27",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 14849,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "248:9:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "236:22:27"
+            },
+            "scope": 14853,
+            "src": "182:77:27",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14854,
+        "src": "27:234:27"
+      }
+    ],
+    "src": "0:262:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.26+commit.4563c3fc.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.3",
+  "updatedAt": "2022-06-10T07:14:18.471Z"
+}
