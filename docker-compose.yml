@@ -1,0 +1,192 @@
+version: '3'
+
+
+services:
+  moc-container:
+    build:
+      context: .
+      dockerfile: moc-ressource/Dockerfile
+
+    container_name: moc-container
+    volumes:
+      # - ./moc/:/home/openethereum/test-network/chain-data/ #to init 
+      - ./moc/keys:/home/openethereum/test-network/chain-data/keys
+      - ./moc/cache:/home/openethereum/test-network/chain-data/cache
+      - ./moc/chains:/home/openethereum/test-network/chain-data/chains
+      - ./moc/network:/home/openethereum/test-network/chain-data/network
+      - ./moc/signer:/home/openethereum/test-network/chain-data/signer
+
+    ports:
+      - 30300:30300 # sync
+      - 8565:8545 # rpc 
+      - 8546:8546 # websockets
+
+    restart: unless-stopped
+
+    environment:
+      - MOC_KEY_ADDRESS=0x6002ec6dd413817b523f865d15e3f2e5598280af
+      - MOC_KEY_PASSWORD=Pianos27111998/
+
+    networks:
+      poa-network-gabriel:
+        ipv4_address: 172.16.0.10
+
+  node0-container:
+    build:
+        context: .
+        dockerfile: node-ressource/Dockerfile
+    container_name: node0-container
+    volumes:
+      # - ./node0-archive/:/home/openethereum/test-network/chain-data/ #to init 
+      - ./node0-archive/keys:/home/openethereum/test-network/chain-data/keys
+      - ./node0-archive/cache:/home/openethereum/test-network/chain-data/cache
+      - ./node0-archive/chains:/home/openethereum/test-network/chain-data/chains
+      - ./node0-archive/network:/home/openethereum/test-network/chain-data/network
+      - ./node0-archive/signer:/home/openethereum/test-network/chain-data/signer
+
+    ports:
+      - 30305:30300 # sync
+      - 8555:8545 # rpc 
+      - 8556:8546 # websockets
+
+    restart: unless-stopped
+
+
+    networks:
+      poa-network-gabriel:
+        ipv4_address: 172.16.0.9
+
+  validator-1-container:
+    build:
+      context: .
+      dockerfile: validator-X-ressource/Dockerfile
+
+    container_name: validator-1-container
+    volumes:
+      # - ./validator-1/:/home/openethereum/test-network/chain-data/ #to init 
+      - ./validator-1/keys:/home/openethereum/test-network/chain-data/keys
+      - ./validator-1/cache:/home/openethereum/test-network/chain-data/cache
+      - ./validator-1/chains:/home/openethereum/test-network/chain-data/chains
+      - ./validator-1/network:/home/openethereum/test-network/chain-data/network
+      - ./validator-1/signer:/home/openethereum/test-network/chain-data/signer
+
+    ports:
+      - 30301:30300 # sync
+      - 8545:8545 # rpc 
+      - 8547:8546 # websockets
+
+    restart: unless-stopped
+
+
+    environment:
+      - MINING_VALIDATOR_KEY_ADDRESS=0xa5fd19d244ace2981f741b70329d95fde11f187a
+      - MINING_VALIDATOR_KEY_PASSWORD=VsL4s_4yyZ0h64QA_uYJ
+
+    networks:
+      poa-network-gabriel:
+        ipv4_address: 172.16.0.11
+
+  validator-2-container:
+    build:
+      context: .
+      dockerfile: validator-X-ressource/Dockerfile
+
+    container_name: validator-2-container
+    volumes:
+      # - ./validator-2/:/home/openethereum/test-network/chain-data/ #to init 
+      - ./validator-2/keys:/home/openethereum/test-network/chain-data/keys
+      - ./validator-2/cache:/home/openethereum/test-network/chain-data/cache
+      - ./validator-2/chains:/home/openethereum/test-network/chain-data/chains
+      - ./validator-2/network:/home/openethereum/test-network/chain-data/network
+      - ./validator-2/signer:/home/openethereum/test-network/chain-data/signer
+
+    ports:
+      - 30302:30300 # sync
+      - 8548:8545 # rpc 
+      - 8549:8546 # websockets
+
+    restart: unless-stopped
+
+    environment:
+      - MINING_VALIDATOR_KEY_ADDRESS=0x8f73ded76b81e5303d0307c6a336f59b56f9b54b
+      - MINING_VALIDATOR_KEY_PASSWORD=CTrL2g8U0z1AJ5GaojPn
+
+    networks:
+      poa-network-gabriel:
+        ipv4_address: 172.16.0.12
+
+  validator-3-container:
+    build:
+      context: .
+      dockerfile: validator-X-ressource/Dockerfile
+
+    container_name: validator-3-container
+    volumes:
+      # - ./validator-3/:/home/openethereum/test-network/chain-data/ #to init 
+      - ./validator-3/keys:/home/openethereum/test-network/chain-data/keys
+      - ./validator-3/cache:/home/openethereum/test-network/chain-data/cache
+      - ./validator-3/chains:/home/openethereum/test-network/chain-data/chains
+      - ./validator-3/network:/home/openethereum/test-network/chain-data/network
+      - ./validator-3/signer:/home/openethereum/test-network/chain-data/signer
+
+    ports:
+      - 30303:30300 # sync
+      - 8550:8545 # rpc 
+      - 8551:8546 # websockets
+
+    restart: unless-stopped
+
+    environment:
+      - MINING_VALIDATOR_KEY_ADDRESS=0xd0a009bb869314d7d2ec1ab275d19f1fd141693a
+      - MINING_VALIDATOR_KEY_PASSWORD=2PFReukeIKN3vrH21Dgi
+
+    networks:
+      poa-network-gabriel:
+        ipv4_address: 172.16.0.13
+        
+  validator-4-container:
+    build:
+      context: .
+      dockerfile: validator-X-ressource/Dockerfile
+
+    container_name: validator-4-container
+    volumes:
+      # - ./validator-4/:/home/openethereum/test-network/chain-data/ #to init 
+      - ./validator-4/keys:/home/openethereum/test-network/chain-data/keys
+      - ./validator-4/cache:/home/openethereum/test-network/chain-data/cache
+      - ./validator-4/chains:/home/openethereum/test-network/chain-data/chains
+      - ./validator-4/network:/home/openethereum/test-network/chain-data/network
+      - ./validator-4/signer:/home/openethereum/test-network/chain-data/signer
+
+    ports:
+      - 30304:30300 # sync
+      - 8552:8545 # rpc 
+      - 8553:8546 # websockets
+
+    restart: unless-stopped
+
+    environment:
+      - MINING_VALIDATOR_KEY_ADDRESS=0x5e7d8c156d36ccaac2cf99b0bf0d6e2dca27c36b
+      - MINING_VALIDATOR_KEY_PASSWORD=gIjWHpJUUbmVLY6xY0bg
+
+    networks:
+      poa-network-gabriel:
+        ipv4_address: 172.16.0.14
+networks:
+
+  poa-network-gabriel:
+    external:
+      name: poa-network-gabriel
+
+
+
+
+
+
+
+
+
+
+  
+
+

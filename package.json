@@ -1,0 +1,20 @@
+{
+  "name": "first-attempt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up": "docker-compose up -d --build",
+    "down": "docker-compose down",
+    "down-up": "docker-compose down && docker-compose up -d --build",
+    "bash": "docker exec -it first-attempt-node bash",
+    "exec": "docker exec -it first-attempt-node",
+    "ls": "docker image ls",
+    "build": "docker image build -t node0-image . ",
+    "run": "docker run -d -p 8540:8540 -p 8450:8450 -p 30303:30303 -p 30303:30303/udp --name node0-container node0-image",
+    "logs": "docker container logs -f"
+  },
+  "author": "",
+  "license": "ISC"
+}

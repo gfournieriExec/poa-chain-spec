@@ -1,0 +1,47 @@
+[parity]
+chain = "poa-test-network.json"
+base_path = "chain-data"
+
+[network]
+reserved_peers="bootnodes.txt"
+port = 30300
+max_peers = 100
+snapshot_peers = 25
+
+[rpc]
+interface = "0.0.0.0"
+port = 8545
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+cors=["all"]
+disable = false
+# apis = ["web3", "eth", "parity", "parity_set", "net", "traces", "rpc"]
+# apis = ["web3","eth","net"]
+
+
+
+[websockets]
+disable = false                         # Enable WS JSON RPC on the standard port
+port = 8546
+interface = "local"
+apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "traces", "rpc"]
+
+# [account]
+# password = ["node.pwd"]
+# # unlock = ["@MINING_KEY_ADDRESS@"]
+
+# [footprint]
+# tracing = "on"
+# pruning = "archive"
+# pruning_history = 1200
+# fat_db = "on"
+# cache_size_db = 12000
+
+# [mining]
+# usd_per_tx = "0"
+# force_sealing = true
+# engine_signer = "@MINING_KEY_ADDRESS@"
+# gas_floor_target = "6700000"
+# reseal_on_txs = "none"
+# min_gas_price = 0
+
+

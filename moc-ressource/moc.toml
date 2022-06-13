@@ -1,0 +1,33 @@
+[parity]
+chain = "poa-test-network.json"
+base_path = "chain-data"
+
+[network]
+reserved_peers="bootnodes.txt"
+port = 30300
+max_peers = 100
+snapshot_peers = 25
+
+[rpc]
+interface = "0.0.0.0"
+port = 8545
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+cors=["all"]
+
+
+[websockets]
+port = 8546
+
+[account]
+password = ["moc.pwd"]
+unlock = ["@MOC_KEY_ADDRESS@"]
+
+[mining]
+usd_per_tx = "0"
+force_sealing = true
+engine_signer = "@MOC_KEY_ADDRESS@"
+gas_floor_target = "6700000"
+reseal_on_txs = "none"
+min_gas_price = 0
+
+
